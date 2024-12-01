@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+# change url to a link to the image you want to use, no file paths, must be a URL
+logo_url: https://codestitch.app/frontend/images/logo.png
+
+media_folder: "src/assets/images/blog"
+public_folder: "/assets/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "location"
+    label: "Location"
+    folder: "src/content/location"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Map URL", name: "mapUrl", widget: "string" }
+      - { label: "Page Title", name: "pageTitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Hero Title", name: "heroTitle", widget: "string" }
+      - { label: "Hero Text", name: "heroText", widget: "string" }
+      - { label: "Hero Alt", name: "heroAlt", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["location"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Summary Title", name: "summaryTitle", widget: "string" }
+      - { label: "Summary Text", name: "summaryText", widget: "string" }
+  - name: "service"
+    label: "Service"
+    folder: "src/content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Service", name: "service", widget: "string" }
+      - { label: "Page Title", name: "pageTitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "BannerTitle", name: "bannerTitle", widget: "string" }
+      - { label: "Banner Image", name: "bannerImage", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["services"] }
+      - { label: "H1 Title", name: "h1Title", widget: "string" }
+      - { label: "H1 Image", name: "h1Image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Section 2 Subheader",
+          name: "section2Subheader",
+          widget: "string",
+        }
+      - { label: "Section 2 Title", name: "section2Title", widget: "string" }
+      - { label: "Section 2 Image", name: "section2Image", widget: "image" }
+      - {
+          label: "Section 2 Content",
+          name: "section2Content",
+          widget: "markdown",
+        }
+      - {
+          label: "Section 3 Subheader",
+          name: "section3Subheader",
+          widget: "string",
+        }
+      - { label: "Section 3 Title", name: "section3Title", widget: "string" }
+      - { label: "Section 3 Image", name: "section3Image", widget: "image" }
+      - {
+          label: "Section 3 Content",
+          name: "section3Content",
+          widget: "markdown",
+        }
